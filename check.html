@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="view" content="width=device-width">
+<title>Hudco  </title>
+<link rel = "stylesheet" type = "text/css" href = "Style1.css" />
+<script>
+function val()
+{
+var age = document.getElementById("age").value;
+var salary = document.getElementById("salary").value;
+var other_inc = document.getElementById("other_inc").value;
+var oblig = document.getElementById("oblig").value;
+var job = document.getElementById("job").value;
+var n=(60-age)*12;
+	if(n>300)
+		n=300;
+months1.innerHTML=n;
+var oc=0.6*other_inc;
+var ti=parseInt(salary)+parseInt(oc-oblig);
+		if(ti>100000.0) {
+			var ci=(0.45*ti);
+         }
+		else {
+			var ci=(0.4*ti);
+			}
+	if(job.localeCompare('private'))
+                var roi=  8.65;
+	else 
+				var roi=  9.25;
+roi1.innerHTML=roi;
+ var pmt=  parseFloat((100000*parseFloat(roi/1200))/(1-Math.pow((1+parseFloat(roi/1200)),(-n))));
+ var Loan= parseInt(ci/pmt);
+loan1.innerHTML=Loan;
+ var emi= parseFloat((Loan*parseFloat(roi/1200)*Math.pow((1+parseFloat(roi/1200)),n))/(Math.pow((1+parseFloat(roi/1200)),n)-1)*100000);
+emi1.innerHTML=Math.round(emi);
+
+}
+</script>
+</head>
+<body>
+<header>
+<img src="icon.png" height="85" width="100" align="left" style="float:left;"/>
+<center><h1 >Housing and Urban Development Corporation</h1><center>
+<nav style="margin-right:0px;">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="loginas.html">Login</a></li>
+<li><a href="register.html">Signup</a></li>
+<li><a href="about.html" >About Us</a></li>
+<li><a href="contact.html" >Contact Us</a></li>
+</ul>
+</nav>
+</header>
+<br><br><br>
+    <form name="form3" method="POST" >
+    <table valign="center">
+            <tr align="left">
+               <th style="color:#FFF;">Age</th>
+               <td>
+                  <label><input type="text" id="age" required name="age" maxlength="2" placeholder="Age" /></label>
+               </td>
+            </tr>
+			 <tr align="left" style="cellpadding:20px">
+				<th style="color:#FFF;">Salary</th>
+               <td>
+                  <label><input type="text" required name="salary"  id="salary" placeholder="Salary"  /></label>
+               </td>
+            </tr>
+            <tr align="left" style="cellpadding:20px">
+               <th style="color:#FFF;">Other_inc</th>
+               <td>
+                  <label><input type="text" required name="other_inc"  id ="other_inc" placeholder="Agriculture,rent,etc "  /></label>
+               </td>
+			</tr>
+           	<tr align="left" style="cellpadding:20px">
+				<th style="color:#FFF;">Obligations</th>
+               <td>
+                  <label><input type="text" required name="oblig" id="oblig"  placeholder="Any other loans"  /></label>
+               </td>
+            </tr>
+			<tr align="left" style="cellpadding:20px">
+				<th style="color:#FFF;">Job</th>
+               <td>
+                    <label><select name="job" id="job" required>
+                        <option>private</option>
+                        <option>government</option>
+                     </select></label>
+               </td>
+            </tr>
+    </table>
+         <br><br>
+         <center><input  type="button" name="check" onclick="val()" value="Check" style=" background-color:#008CBA; font-size:16px; border-radius:8px; width:100px; height:40px;"/><center>
+         </table>
+    </form>
+	<p style="color:white;align:center">Amount of loan eligible(in lakhs) : <span id = "loan1"></span> </p>
+	<p style="color:white;align:center">Emi : <span id = "emi1"></span> </p>
+	<p style="color:white;align:center">No. of months to pay emi : <span id = "months1"></span> </p>
+	<p style="color:white;align:center">Rate Of Interest : <span id = "roi1"></span> </p>
+</body>
+</html>

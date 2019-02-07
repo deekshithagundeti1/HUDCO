@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="view" content="width=device-width">
+<title>Hudco</title>
+<link rel = "stylesheet" type = "text/css" href = "Style1.css" />
+</head>
+<body>
+<header>
+<img src="icon.png" height="85" width="100" align="left" style="float:left;"/>
+<center><h1 >Housing and Urban Development Corporation</h1><center>
+<nav style="margin-right:0px;">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="loginas.html" class="current">Login</a></li>
+<li><a href="register.html">Signup</a></li>
+<li><a href="about.html" >About Us</a></li>
+<li><a href="contact.html" >Contact Us</a></li>
+</ul>
+</nav>
+</header>
+<body align="center" >
+<h1 align="center" style="color:#0FB0F1; font-family: Showcard Gothic;">Login</h1><br />
+    <form name="form2"   method="POST" action="db.php" >
+    <table align="center">
+    <tr align="left" ><th style="color:#0FB0F1;" > Emailid </th><td ><label> <input style="padding:10px; width:175px;" type="text" required name="email" placeholder="Id" /></label></td></tr>
+    <tr align="left"><th style="color:#0FB0F1;">Password </th><td><label> <input  style="padding:10px; width:175px;" type="password" required name="pass" placeholder="Password" /></label></td></tr>
+    
+	</table><br />
+    <input  type="submit" name="login" onclick="call1()" value="Login" style=" background-color:#008CBA; font-size:16px; border-radius:8px; width:100px; height:40px;"/><br><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="view" content="width=device-width">
+<link rel = "stylesheet" type = "text/css" href = "Style1.css" />
+<title>Hudco  </title>
+<style>
+label{
+font:bold 18px calibri;
+color:#0FB0F1;
+}
+table
+{
+	width:70%;
+	float:right;
+border-spacing:15px;
+}
+ input
+{
+
+	height:35px;
+	border:0;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+}
+body
+{
+background:#35424a;
+background-repeat:no-repeat;
+}
+#table1 input{
+padding:10px;
+width:40%;
+}
+.button_1
+{
+float:rigth;
+}
+</style>
+</head>
+<body>
+<header>
+<img src="icon.png" height="85" width="100" align="left" style="float:left;"/>
+<center><h1 >Housing and Urban Development Corporation</h1><center>
+<nav style="margin-right:0px;">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="loginas.html">Login</a></li>
+<li><a href="register.html" class="current">Signup</a></li>
+<li><a href="about.html" >About Us</a></li>
+<li><a href="contact.html" >Contact Us</a></li>
+</ul>
+</nav>
+</header>
+<section id="main">
+<br><br>
+<center>
+<h1 id="pagetitle"  style="color:#0FB0F1;" >Register</h1></center>
+<form name="form1" id="quote2" action ="db.php" method="POST" ></div>
+<table id="table1">
+<tr>
+<td><label> Name <label>
+<td>
+<input type="text" name="id"  size="100">
+
+<tr>
+<td>
+<label>Emailid</label></td>
+<td>
+<input type="email" name="email"  size="80" ></td>
+</tr>
+<tr>
+<td>
+<label>Password</label></td>
+<td>
+<input type="password"  name="pass"  size="80"> </td>
+</tr>
+<tr>
+<td ></td>
+<td>
+<button class="button_1" type="submit" onClick="call()" name="submit" style=" background-color:#008CBA; font-size:16px; border-radius:8px; width:100px; height:40px;"> Submit</button>
+</td></tr>
+</table>
+</form>
+</section>
+</body>
+</html>

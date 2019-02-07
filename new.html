@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style>
+        .container{
+            position:relative;
+            width:100%;
+            height:300px;
+            border-radius:5px;
+            border:1px solid red;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="imgGallary" class="container">
+    <img src="one.jpg" width="100%" />
+    <img src="two.jpg" width="100%"/>
+    <img src="three" width="100%"/>
+    <img src="four"width="100%"/>
+</div>
+<script>
+(function(){
+        var imgLen = document.getElementById('imgGallary');
+        var images = imgLen.getElementsByTagName('img');
+        var counter = 1;
+
+        if(counter <= images.length){
+            setInterval(function(){
+                images[0].src = images[counter].src;
+                console.log(images[counter].src);
+                counter++;
+
+                if(counter === images.length){
+                    counter = 1;
+                }
+            },4000);
+        }
+})();
+</script>
+</body>
+</html>
